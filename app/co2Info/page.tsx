@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 
 
 
-export default async function co2InfoPage() {
+export default function co2InfoPage() {
  
 
   return (
@@ -35,7 +35,7 @@ export default async function co2InfoPage() {
                 <li>
                   <strong className="text-blueExtraLight">
                   Natural Occurrence:
-                  </strong>{" "}
+                  </strong>
                   It is a naturally occurring gas in Earth's atmosphere, constituting approximately 0.04% (400 parts per million) of the atmosphere's composition. This vital greenhouse gas plays a fundamental role in maintaining the planet's temperature by trapping outgoing infrared radiation, thus preventingexcessive heat from escaping into space. It is released by decomposition, methane oxidation, volcanic activity, wildfires ocean release, and respiration in living organisms.
                 </li>
               </ul>

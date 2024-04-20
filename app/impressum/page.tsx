@@ -3,7 +3,7 @@ import MenuHeader from "../components/menuHeader";
 import Footer from "../components/footer";
 
 
-export default async function impressumPage() {
+export default function impressumPage() {
 
   return (
     <div>

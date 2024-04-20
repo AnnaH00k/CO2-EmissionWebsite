@@ -2,7 +2,7 @@ import React from "react";
 import MenuHeader from "../components/menuHeader";
 import Footer from "../components/footer";
 
-export default async function actionsPage() {
+export default function actionsPage() {
 
   return (
     <div>      

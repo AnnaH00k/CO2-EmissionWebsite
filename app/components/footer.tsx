@@ -19,8 +19,8 @@ export default function Footer() {
         <footer className="flex my-[10vh] mx-2 justify-center">
             <ul className="">
                 <a className="m-2 text-blueExtraLight github-page-link" href="/datasecurity"> Datasecurity</a>
-                <a className="m-2 text-blueExtraLight github-page-link" href="../impressum"> Imprint</a>
-                <a className="m-2 text-blueExtraLight github-page-link" href="../contact">Contact</a>
+                <a className="m-2 text-blueExtraLight github-page-link" href="/impressum"> Imprint</a>
+                <a className="m-2 text-blueExtraLight github-page-link" href="/contact">Contact</a>
             </ul>
         </footer>
     );

@@ -9,7 +9,7 @@ export default function Footer() {
             links.forEach(link => {
                 const href = link.getAttribute('href');
                 if (href) {
-                    link.setAttribute('href', href.startsWith('/CO2-EmissionWebsite') ? href : '/CO2-EmissionWebsite' + href);
+                    link.setAttribute('href', href.startsWith('/co2-zone') ? href : '/co2-zone' + href);
                 }
             });
         }

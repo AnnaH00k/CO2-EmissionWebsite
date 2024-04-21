@@ -86,7 +86,7 @@ export default function MenuHeader() {
             <nav >
                 <div ref={menuRef} className='flex z-100 flex-col items-center'>
                     <div className={`flex flex-row items-start sm:fixed top-0  left-0 w-auto h-auto text-blueExtraLight bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl border border-blueDark border-solid border-1 m-[1vh]  z-10`}>
-                        <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(false); setMenu3Open(false) }} href='/'> Overview</a>
+                        <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(false); setMenu3Open(false) }} href='/datasecurity'> Overview</a>
                         <div className='flex flex-col items-start top-0 left-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl text-blueExtraLight z-10' onMouseEnter={() => { setMenu1Open(true); setMenu2Open(false); setMenu3Open(false) }} onMouseLeave={() => setMenu1Open(true)}>
                             <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu1Open(true)} > CO2 Infos</a>
                         </div>

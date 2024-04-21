@@ -1,22 +1,6 @@
 "use client";
 
-import { useEffect } from 'react';
-
-
 export default function Menu1() {
-
-  useEffect(() => {
-    if (window.location.hostname === 'annah00k.github.io') {
-      const links = document.querySelectorAll('.github-page-link');
-      links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href) {
-          link.setAttribute('href', href.startsWith('/co2-zone') ? href : '/co2-zone' + href);
-        }
-      });
-    }
-  }, []);
-
 
   return (
     <div className="sm:relative fixed bg-blueDark sm:left-10 hover:bg-blueExtraDark flex flex-col flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh] text-blueExtraLight ">
@@ -34,25 +18,25 @@ export default function Menu1() {
       </a>
       <a
         className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
-        href="/co2Info#HowIsItMonitored"
+        href={process.env.NODE_ENV === 'production' ? '/co2-zone/co2Info#HowIsItMonitored' : '/co2Info#HowIsItMonitored'}
       >
         How is it monitored?
       </a>
       <a
         className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
-        href="/co2Info#CurrentResearch"
+        href={process.env.NODE_ENV === 'production' ? '/co2-zone/co2Info#CurrentResearch' : '/co2Info#CurrentResearch'}
       >
         Current research on CO2 Emissions
       </a>
       <a
         className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
-        href="/co2Info#OtherInfluences"
+        href={process.env.NODE_ENV === 'production' ? '/co2-zone/co2Info#OtherInfluences' : '/co2Info#OtherInfluences'}
       >
         What else influences our Environment ?
       </a>
       <a
         className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
-        href="/co2Info#CO2Equivalents"
+        href={process.env.NODE_ENV === 'production' ? '/co2-zone/co2Info#CO2Equivalents' : '/co2Info#CO2Equivalents'}
       >
          CO2 Equivalents
       </a>

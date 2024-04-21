@@ -1,23 +1,10 @@
 'use client';
 import MenuHeader from "./components/menuHeader";
 import Footer from "./components/footer";
-import { useEffect } from "react";
 
 
 
 export default function Home() {
-
-  useEffect(() => {
-    if (window.location.hostname === 'annah00k.github.io') {
-        const links = document.querySelectorAll('.github-page-link');
-        links.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href) {
-                link.setAttribute('href', '/CO2-EmissionWebsite' + href);
-            }
-        });
-    }
-}, []);
 
   return (
     <div>

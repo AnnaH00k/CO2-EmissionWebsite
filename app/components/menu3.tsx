@@ -1,8 +1,20 @@
 'use client';
 
+import { useEffect } from "react";
+
 export default function Menu3() {
  
-
+  useEffect(() => {
+    if (window.location.hostname === 'annah00k.github.io') {
+      const links = document.querySelectorAll('.github-page-link');
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href) {
+          link.setAttribute('href', href.startsWith('/co2-zone') ? href : '/co2-zone' + href);
+        }
+      });
+    }
+  }, []);
 
   return (
     <div className={`sm:relative fixed bg-blueDark sm:left-60 hover:bg-blueExtraDark flex flex-col flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh] text-blueExtraLight z-10`}>

@@ -13,6 +13,19 @@ export default function MenuHeader() {
 
 
     useEffect(() => {
+        if (window.location.hostname === 'annah00k.github.io') {
+            const links = document.querySelectorAll('.github-page-link');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href) {
+                    link.setAttribute('href', href.startsWith('/co2-zone') ? href : '/co2-zone' + href);
+                }
+            });
+        }
+    }, []);
+
+
+    useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (menuRef.current && !(menuRef.current as any).contains(event.target)) {
                 setMenu1Open(false);

@@ -13,6 +13,19 @@ export default function MenuHeader() {
 
 
     useEffect(() => {
+        if (window.location.hostname === 'annah00k.github.io') {
+            const links = document.querySelectorAll('.github-page-link');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href) {
+                    link.setAttribute('href', href.startsWith('/CO2-EmissionWebsite') ? href : '/CO2-EmissionWebsite' + href);
+                }
+            });
+        }
+    }, []);
+
+
+    useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (menuRef.current && !(menuRef.current as any).contains(event.target)) {
                 setMenu1Open(false);
@@ -69,18 +82,7 @@ export default function MenuHeader() {
 
 
 
-    useEffect(() => {
-        if (window.location.hostname === 'annah00k.github.io') {
-            const links = document.querySelectorAll('.github-page-link');
-            links.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href) {
-                    link.setAttribute('href', href.startsWith('/CO2-EmissionWebsite') ? href : '/CO2-EmissionWebsite' + href);
-                }
-            });
-        }
-    }, []);
-    
+
 
     return (
         <header>

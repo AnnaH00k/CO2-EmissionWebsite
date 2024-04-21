@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 
-export default function menu2() {
+export default function Menu2() {
    
     useEffect(() => {
         if (window.location.hostname === 'annah00k.github.io') {

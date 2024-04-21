@@ -1,9 +1,23 @@
+'use client';
 import MenuHeader from "./components/menuHeader";
 import Footer from "./components/footer";
+import { useEffect } from "react";
 
 
 
 export default function Home() {
+
+  useEffect(() => {
+    if (window.location.hostname === 'annah00k.github.io') {
+        const links = document.querySelectorAll('.github-page-link');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href) {
+                link.setAttribute('href', '/CO2-EmissionWebsite' + href);
+            }
+        });
+    }
+}, []);
 
   return (
     <div>
@@ -12,7 +26,7 @@ export default function Home() {
       <main>
         <div className=" mt-[5vh] flex flex-col justify-center items-center">
           <div className="w-[40vw] max-w-[500px]">
-            <img src="../CO2zoneLogo.png" alt="logo" width="100%" />
+            <img src="/CO2zoneLogo.png" alt="logo" width="100%" />
           </div>
           <h1 className="flex hyphens-auto text-center text-blueExtraLight text-lg sm:text-4xl m-4 ">
             Advancing Environmental Consciousness, Together!

@@ -36,7 +36,7 @@ export default function co2InfoPage() {
                   <strong className="text-blueExtraLight">
                   Natural Occurrence:
                   </strong>
-                  It is a naturally occurring gas in Earth's atmosphere, constituting approximately 0.04% (400 parts per million) of the atmosphere's composition. This vital greenhouse gas plays a fundamental role in maintaining the planet's temperature by trapping outgoing infrared radiation, thus preventingexcessive heat from escaping into space. It is released by decomposition, methane oxidation, volcanic activity, wildfires ocean release, and respiration in living organisms.
+                  It is a naturally occurring gas in Earths atmosphere, constituting approximately 0.04% (400 parts per million) of the atmosphere's composition. This vital greenhouse gas plays a fundamental role in maintaining the planet's temperature by trapping outgoing infrared radiation, thus preventingexcessive heat from escaping into space. It is released by decomposition, methane oxidation, volcanic activity, wildfires ocean release, and respiration in living organisms.
                 </li>
               </ul>
             </div>
@@ -88,7 +88,7 @@ export default function co2InfoPage() {
                       </h1>
                       <strong className="text-blueExtraLight">
                         Carbonation:
-                      </strong>{" "}
+                      </strong>
                       CO2 dissolves in water to form carbonic acid (H2CO3). This  reaction is reversible, and carbonic acid can dissociate back into CO2 and water. Oceans act as a sink for CO2, absorbing a significant amount, but this process can lead to ocean acidification.
                     </div>
 

@@ -1,20 +1,9 @@
 'use client';
-import React, { useEffect } from 'react';
 
 
 export default function Menu2() {
    
-    useEffect(() => {
-        if (window.location.hostname === 'annah00k.github.io') {
-            const links = document.querySelectorAll('.github-page-link');
-            links.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href) {
-                    link.setAttribute('href', '/CO2-EmissionWebsite' + href);
-                }
-            });
-        }
-    }, []);
+ 
 
     
     return (

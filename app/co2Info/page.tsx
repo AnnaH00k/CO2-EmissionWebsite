@@ -75,7 +75,7 @@ export default function co2InfoPage() {
 
                     <img
                       className="rounded-xl w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4 object-contain"
-                      src="/photosynthesis.png"
+                      src={process.env.NODE_ENV === 'production' ? '/co2-zone/photosynthesis.png' : '/photosynthesis.png'}
                       alt="photosynthesis"
                     />
                   </div>
@@ -95,7 +95,7 @@ export default function co2InfoPage() {
 
                     <img
                       className="rounded-xl object-contain w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4"
-                      src="/carbonation.png"
+                      src={process.env.NODE_ENV === 'production' ? '/co2-zone/carbonation.png' : '/carbonation.png'}
                       alt="carbonation"
                     />
                   </div>

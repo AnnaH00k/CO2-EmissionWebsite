@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { useEffect } from 'react';
 import Menu1 from "./menu1";
 import Menu2 from "./menu2";
 import Menu3 from "./menu3";

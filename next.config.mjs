@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/CO2-EmissionWebsite",
+   
+    images: {
+        domains: ['localhost', '/co2-emissionwebsite'],
+    },
+
+  
 };
 
 export default nextConfig;

@@ -1,6 +1,20 @@
 'use client';
 import MenuHeader from "./components/menuHeader";
 import Footer from "./components/footer";
+import { useEffect } from "react";
+
+
+useEffect(() => {
+  if (window.location.hostname === 'annah00k.github.io') {
+      const links = document.querySelectorAll('.github-page-link');
+      links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href) {
+              link.setAttribute('href', href.startsWith('/CO2-EmissionWebsite') ? href : '/CO2-EmissionWebsite' + href);
+          }
+      });
+  }
+}, []);
 
 
 

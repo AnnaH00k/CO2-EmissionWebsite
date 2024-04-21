@@ -1,6 +1,7 @@
 {
   "name": "co2-emissionwebsite",
   "version": "0.1.0",
+  "homepage": "https://annah00k.github.io/CO2-EmissionWebsite",
   "private": true,
   "scripts": {
     "dev": "next dev",

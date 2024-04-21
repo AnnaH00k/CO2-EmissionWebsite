@@ -1,6 +1,5 @@
 "use client";
-import React, { useRef, useState } from 'react';
-import { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Menu1 from "./menu1";
 import Menu2 from "./menu2";
 import Menu3 from "./menu3";
@@ -11,19 +10,6 @@ export default function MenuHeader() {
     const [menu1open, setMenu1Open] = useState(false);
     const [menu2open, setMenu2Open] = useState(false);
     const [menu3open, setMenu3Open] = useState(false);
-
-
-    useEffect(() => {
-        if (window.location.hostname === 'annah00k.github.io') {
-            const links = document.querySelectorAll('.github-page-link');
-            links.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href) {
-                    link.setAttribute('href', href.startsWith('/CO2-EmissionWebsite') ? href : '/CO2-EmissionWebsite' + href);
-                }
-            });
-        }
-    }, []);
 
 
     useEffect(() => {
@@ -80,9 +66,6 @@ export default function MenuHeader() {
         return true;
     }
     
-
-
-
 
 
     return (

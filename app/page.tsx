@@ -1,6 +1,6 @@
 import MenuHeader from "./components/menuHeader";
 import Footer from "./components/footer";
-
+import Table from "./components/table";
 
 export default function Home() {
 
@@ -16,19 +16,11 @@ export default function Home() {
           <h1 className="flex hyphens-auto text-center text-blueExtraLight text-lg sm:text-4xl m-4 ">
             Advancing Environmental Consciousness, Together!
           </h1>
+
+          <Table />              
          
         </div>
-
-
-        <h1 className="text-blueExtraLight text-3xl text-center mt-5">
-        Get a feel for the measuring Unit
-        </h1>
-        <ul className="text-blueLight text-xl text-left m-6 ">
-          <li>
-          - According to the United States Environmental Protection Agency (EPA), the average passenger vehicle emits about 4.6 metric tons of carbon dioxide equivalent per year. Therefore, 1 MtCO2e is roughly equivalent to the annual emissions of approximately 217 passenger cars.
-          </li>
-          <li></li>
-        </ul>
+       
       </main>
 
       <Footer/>

@@ -6,7 +6,7 @@ export default function Menu1() {
     <div className="sm:relative fixed bg-blueDark sm:left-10 hover:bg-blueExtraDark flex flex-col flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh] text-blueExtraLight ">
       <a
         className="text-blueExtraLight hyphens-auto no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
-        href={process.env.NODE_ENV === 'production' ? '/co2-zone/co2Info#WhatIsCo2' : '/co2Info#WhatIsCo2'}
+        href={process.env.NODE_ENV === 'production' ? '/co2-zone/co2Info' : '/co2Info'}
       >
         What is CO2?
       </a>

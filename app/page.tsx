@@ -16,8 +16,8 @@ export default function Home() {
           <h1 className="flex hyphens-auto text-center text-blueExtraLight text-lg sm:text-4xl m-4 ">
             Advancing Environmental Consciousness, Together!
           </h1>
-
-          <Table />              
+              
+          <Table/>
          
         </div>
        

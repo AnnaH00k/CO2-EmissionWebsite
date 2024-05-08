@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import jsonData from "../Data/table.json";
+import jsonData from "../data/table.json";
 import { ArrowArcLeft, Info } from "@phosphor-icons/react/dist/ssr";
 import { ArrowArcRight } from "@phosphor-icons/react";
 

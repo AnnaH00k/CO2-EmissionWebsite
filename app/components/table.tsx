@@ -4,7 +4,7 @@ import jsonData from "../Data/table.json";
 import { ArrowArcLeft, Info } from "@phosphor-icons/react/dist/ssr";
 import { ArrowArcRight } from "@phosphor-icons/react";
 
-const Table = () => {
+export default function Table() {
 
 
 interface TableData {
@@ -418,12 +418,4 @@ interface TableData {
   );
 };
 
-export default Table;
-function timeOut() {
-  throw new Error("Function not implemented.");
-}
-
-function setIsExplanationOpen(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
 

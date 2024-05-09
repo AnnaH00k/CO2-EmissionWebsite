@@ -5,7 +5,7 @@ import Table from "./components/table";
 export default function Home() {
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <MenuHeader />
 
       <main>

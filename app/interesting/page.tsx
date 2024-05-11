@@ -7,7 +7,6 @@ export default function interestingPage() {
 
   return (
     <div>
-      <MenuHeader />
       <div className=" mt-[5vh] flex flex-col justify-center items-center">
         <h1 className="text-blueExtraLight text-center text-4xl  m-4  ">
           {"Addressing Climate Change: Global Strategies and Emerging Solutions"}
@@ -78,7 +77,6 @@ export default function interestingPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

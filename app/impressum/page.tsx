@@ -7,7 +7,6 @@ export default function impressumPage() {
 
   return (
     <div>
-     <MenuHeader />
       <div className=" text-blueExtraLight mt-[5vh] flex flex-col justify-center items-center">
         <h1 className="text-blueExtraLight text-4xl  m-4  ">{"Legal Information"}  </h1>
         <div className="container text-blueExtraLight mx-auto px-4">
@@ -44,7 +43,6 @@ export default function impressumPage() {
           </p>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -6,7 +6,6 @@ export default function actionsPage() {
 
   return (
     <div>      
-    <MenuHeader />
 
       <div className=" mt-[5vh] flex flex-col justify-center items-center">
         <h1 className="text-blueExtraLight text-center text-4xl m-4  ">
@@ -73,7 +72,6 @@ export default function actionsPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

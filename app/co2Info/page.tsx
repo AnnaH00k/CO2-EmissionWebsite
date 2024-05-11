@@ -9,7 +9,6 @@ export default function co2InfoPage() {
 
   return (
     <div>
-      <MenuHeader />
 
       <div
         id="WhatIsCo2"
@@ -264,7 +263,6 @@ export default function co2InfoPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

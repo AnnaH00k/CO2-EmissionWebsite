@@ -6,7 +6,6 @@ export default function contactPage() {
 
   return (
     <div>
-      <MenuHeader />
       <div className=" mt-[5vh] flex flex-col justify-center items-center">
         <h1 className="text-blueExtraLight text-4xl  m-4 "> {"Contact us"} </h1>
       </div>
@@ -49,7 +48,6 @@ export default function contactPage() {
         {"We typically respond to inquiries within 24-48 hours. Thank you for reaching out!"}    
         </p>
       </div>
-      <Footer />
     </div>
   );
 }

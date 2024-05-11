@@ -6,7 +6,6 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
-      <MenuHeader />
 
       <main>
         <div className=" mt-[5vh] flex flex-col justify-center items-center">
@@ -23,7 +22,6 @@ export default function Home() {
        
       </main>
 
-      <Footer/>
     </div>
   );
 }

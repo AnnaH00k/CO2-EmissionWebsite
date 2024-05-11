@@ -72,7 +72,7 @@ export default function MenuHeader() {
         <header>
             <nav >
                 <div ref={menuRef} className='flex z-100 flex-col items-center'>
-                    <div className={`flex flex-row items-start sm:fixed top-0  left-0 w-auto h-auto text-blueExtraLight bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl border border-blueDark border-solid border-1 m-[1vh]  z-10`}>
+                    <div className={`flex flex-row items-start sm:fixed top-0 shadow-xl left-0 w-auto h-auto text-blueExtraLight bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl border border-blueDark border-solid border-1 m-[1vh]  z-10`}>
                         <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(false); setMenu3Open(false) }}  href={process.env.NODE_ENV === 'production' ? '/co2-zone/' : '/'}> Overview</a>
                         <div className='flex flex-col items-start top-0 left-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl text-blueExtraLight z-10' onMouseEnter={() => { setMenu1Open(true); setMenu2Open(false); setMenu3Open(false) }} onMouseLeave={() => setMenu1Open(true)}>
                             <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu1Open(true)} > CO2 Infos</a>
@@ -90,7 +90,7 @@ export default function MenuHeader() {
                         {menu3open && <Menu3 />}
                     </div>
                     <div className="search_box">
-                        <form action="" id="form2" className={`flex flex-row items-center sm:fixed top-0 right-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] pt-[1vh] pb-[1vh] rounded-3xl border border-blueDark border-1 m-[1vh] text-blueExtraLight text-sm md:text-lg sm:text-md z-10`} >
+                        <form action="" id="form2" className={`flex shadow-xl flex-row items-center sm:fixed top-0 right-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] pt-[1vh] pb-[1vh] rounded-3xl border border-blueDark border-1 m-[1vh] text-blueExtraLight text-sm md:text-lg sm:text-md z-10`} >
                             <input className='bg-blueExtraDark'  type="text" id="search" name="suche" placeholder="Search" onKeyDown={handleKeyDown} />
                             <button type="button" id="submit_form" onClick={checkInput} title="Search"><MagnifyingGlass size={25} /></button>
                         </form>

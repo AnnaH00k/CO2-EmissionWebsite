@@ -7,7 +7,6 @@ export default function datasecurityPage() {
 
   return (
     <div>
-      <MenuHeader />
       <div className=" mt-[5vh] flex flex-col justify-center items-center">
         <h1 className="text-blueExtraLight text-4xl  m-4 ">
           {"Datasecurity"}</h1>
@@ -46,7 +45,6 @@ export default function datasecurityPage() {
           {"If you have any questions or concerns about data security or privacy, please don't hesitate to contact us."}
         </p>
       </div>
-      <Footer />
     </div>
   );
 }

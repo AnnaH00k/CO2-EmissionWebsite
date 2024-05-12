@@ -74,12 +74,11 @@ export default function Co2InfoPage() {
                       </strong>
                       {"Plants use CO2 during photosynthesis to produce glucose and oxygen. In the presence of sunlight, chlorophyll in plant cells captures CO2 from the air and water from the soil, converting them into glucose and oxygen."}
                     </div>
-
-                    <img
-                      className="rounded-xl w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4 object-contain"
-                      src={'/photosynthesis.png'}
-                      alt="photosynthesis"
-                    />
+                      <img 
+                        src={process.env.NODE_ENV === 'production' ? '/co2-zone/photosynthesis.png' : '/photosynthesis.png'}  
+                        alt="logo" 
+                        className="rounded-xl w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4 object-contain"
+                      />
                   </div>
                 </li>
 
@@ -94,12 +93,11 @@ export default function Co2InfoPage() {
                       </strong>
                         {"CO2 dissolves in water to form carbonic acid (H2CO3). This reaction is reversible, and carbonic acid can dissociate back into CO2 and water. Oceans act as a sink for CO2, absorbing a significant amount, but this process can lead to ocean acidification."}
                     </div>
-
-                    <img
-                      className="rounded-xl object-contain w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4"
-                      src={'/carbonation.png'}
-                      alt="carbonation"
-                    />
+                      <img 
+                          src={process.env.NODE_ENV === 'production' ? '/co2-zone/carbonation.png' : '/carbonation.png'}  
+                          alt="logo" 
+                          className="rounded-xl w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4 object-contain"
+                        />
                   </div>
                 </li>
 

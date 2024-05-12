@@ -2,9 +2,13 @@
 
 import { useEffect } from "react";
 import Link from 'next-intl/link';
+import { useTranslations } from "next-intl";
 
 
 export default function Footer() {
+
+    const t = useTranslations('Footer')
+
     useEffect(() => {
         if (window.location.hostname === 'annah00k.github.io') {
             const links = document.querySelectorAll('.github-page-link');
@@ -20,9 +24,9 @@ export default function Footer() {
     return (
         <footer className="flex mt-[5vh] w-full overflow-hidden  justify-center shadow-top-xl  py-6 px-2 bg-blueExtraDark border border-blueDark border-solid border-1">
             <ul className="">
-                <Link className="m-2 text-blueExtraLight github-page-link" href="/datasecurity"> Datasecurity</Link>
-                <Link className="m-2 text-blueExtraLight github-page-link" href="/impressum"> Imprint</Link>
-                <Link className="m-2 text-blueExtraLight github-page-link" href="/contact">Contact</Link>
+                <Link className="m-2 text-blueExtraLight github-page-link" href="/datasecurity">{t("datasecurity")} </Link>
+                <Link className="m-2 text-blueExtraLight github-page-link" href="/impressum">{t("impressum")} </Link>
+                <Link className="m-2 text-blueExtraLight github-page-link" href="/contact">{t("contact")} </Link>
             </ul>
         </footer>
     );

@@ -1,34 +1,36 @@
 "use client";
+import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 
 
 export default function Menu3() {
+  const t = useTranslations('Menu3')
 
   return (
-    <div className={`sm:relative fixed bg-blueDark shadow-xl sm:left-60 hover:bg-blueExtraDark flex flex-col flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh] text-blueExtraLight z-10`}>
+    <div className={`sm:relative fixed bg-blueExtraDark shadow-xl sm:left-60 hover:bg-blueExtraDark flex flex-col flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh] text-blueExtraLight z-10`}>
     <Link
-        className="text-blueExtraLight hyphens-auto no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
+        className="text-blueExtraLight hyphens-auto no-underline text-sm md:text-lg sm:text-md w-full my-[1vh] mx-[1vw]"
         href= '/interesting'
       >
-        Global Cooperation on Climate Change
+       {t("h0")}
       </Link>
       <Link
-        className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
+        className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-full my-[1vh] mx-[1vw]"
         href='/interesting#EmissionTradingSchemes'
       >
-        Emission Trading Schemes
+         {t("h1")}
       </Link>
       <Link
-        className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
+        className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-full my-[1vh] mx-[1vw]"
         href= '/interesting#Geoengineering'
       >
-        Geoengineering solutions?
+        {t("h2")}
       </Link>
       <Link
-        className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]"
+        className="text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-full my-[1vh] mx-[1vw]"
         href= '/interesting#ClimateChangeDenial'
       >
-        Climate Change Denial
+        {t("h3")}
       </Link>
     </div>
   );

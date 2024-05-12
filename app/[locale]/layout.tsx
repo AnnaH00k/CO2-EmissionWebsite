@@ -28,7 +28,7 @@ async function getMessages(locale: string) {
 
 //function to generate the routes for all the locales
 export async function generateStaticParams() {
-  return ['en', 'fr'].map((locale) => ({ locale }))
+  return ['en', 'fr', 'ar'].map((locale) => ({ locale }))
 }
 
 export default async function RootLayout({

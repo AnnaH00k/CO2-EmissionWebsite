@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
             onChange={onLocaleChange}
             className='bg-blueExtraDark text-blueExtraLight border-none cursor-pointer  text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]'
         >
-            {['en', 'fr'].map((lang) => (
+            {['en', 'fr', 'ar'].map((lang) => (
                 <option key={lang} value={lang}>
                     {t('locale', { locale: lang })}
                 </option>

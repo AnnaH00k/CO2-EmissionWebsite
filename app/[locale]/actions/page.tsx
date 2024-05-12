@@ -1,15 +1,18 @@
+'use client';
 import React from "react";
-import MenuHeader from "../components/menuHeader";
-import Footer from "../components/footer";
+import { useTranslations } from 'next-intl'
 
-export default function actionsPage() {
+
+
+export default function ActionsPage() {
+  const t = useTranslations('ActionsPage')
 
   return (
     <div>      
 
       <div className=" mt-[5vh] flex flex-col justify-center items-center">
         <h1 className="text-blueExtraLight text-center text-4xl m-4  ">
-          {"Combating Climate Change: Collective Actions for a Sustainable Future"}
+          {t('header1')}
         </h1>
 
         <div id="ActionIndividuals" className="h-[5vh]" />

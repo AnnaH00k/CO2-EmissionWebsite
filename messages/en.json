@@ -1,0 +1,33 @@
+{
+    "Homepage": {
+        "helloWorld": "Advancing Environmental Consciousness, Together!"
+    },
+    "ActionsPage": {
+        "header1": "Combating Climate Change: Collective Actions for a Sustainable Future"
+    },
+    "CO2InfoPage": {
+        "header1": "Understanding CO2: Its Impact and Monitoring"
+    },
+    "ContactPage": {
+        "header1": "Contact us"
+    },
+    "DatasecurityPage": {
+        "header1": "Datasecurity"
+    },
+    "ImpressumPage": {
+        "header1": "Legal Information"
+    },
+    "InterestingPage": {
+        "header1": "Addressing Climate Change: Global Strategies and Emerging Solutions"
+    },
+    "MenuHeader": {
+        "header1": "Overview",
+        "header2": "CO2 Infos",
+        "header3": "Actions",
+        "header4": "Interesting"
+    },
+    "LocaleSwitcher": {
+        "locale": "{locale, select, fr {French} en {English} other {Unknown}}"
+    }
+
+}

@@ -1,13 +1,17 @@
+'use client';
 import React from "react";
-import MenuHeader from "../components/menuHeader";
-import Footer from "../components/footer";
+import { useTranslations } from 'next-intl'
 
-export default function contactPage() {
+
+export default function ContactPage() {
+  const t = useTranslations('ContactPage')
 
   return (
     <div>
       <div className=" mt-[5vh] flex flex-col justify-center items-center">
-        <h1 className="text-blueExtraLight text-4xl  m-4 "> {"Contact us"} </h1>
+        <h1 className="text-blueExtraLight text-4xl  m-4 "> 
+          {t('header1')}
+        </h1>
       </div>
       <div className="text-blueExtraLight container mx-auto px-4">
         <p className="text-lg mb-4">

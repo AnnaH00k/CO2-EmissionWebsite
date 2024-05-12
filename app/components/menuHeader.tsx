@@ -1,11 +1,16 @@
-"use client";
+'use client'
+import { useTranslations } from 'next-intl'
 import React, { useEffect, useRef, useState } from 'react';
 import Menu1 from "./menu1";
 import Menu2 from "./menu2";
 import Menu3 from "./menu3";
 import {MagnifyingGlass } from "@phosphor-icons/react";
+import LocaleSwitcher from "./localeSwitcher";
+import Link from 'next-intl/link';
+
 
 export default function MenuHeader() {
+    const t = useTranslations('MenuHeader')
     const menuRef = useRef(null);
     const [menu1open, setMenu1Open] = useState(false);
     const [menu2open, setMenu2Open] = useState(false);
@@ -69,19 +74,22 @@ export default function MenuHeader() {
 
 
     return (
-        <header>
+        <header className="">
             <nav >
                 <div ref={menuRef} className='flex z-100 flex-col items-center'>
                     <div className={`flex flex-row items-start sm:fixed top-0 shadow-xl left-0 w-auto h-auto text-blueExtraLight bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl border border-blueDark border-solid border-1 m-[1vh]  z-10`}>
-                        <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(false); setMenu3Open(false) }}  href={process.env.NODE_ENV === 'production' ? '/co2-zone/' : '/'}> Overview</a>
+                        <Link className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(false); setMenu3Open(false) }}  href={'/'}> {t("header1")} </Link>
                         <div className='flex flex-col items-start top-0 left-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl text-blueExtraLight z-10' onMouseEnter={() => { setMenu1Open(true); setMenu2Open(false); setMenu3Open(false) }} onMouseLeave={() => setMenu1Open(true)}>
-                            <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu1Open(true)} > CO2 Infos</a>
+                            <Link className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw] line-clamp-1' onClick={() => setMenu1Open(true)} href={'/co2Info'} > {t("header2")} </Link>
                         </div>
                         <div className='flex flex-col items-start top-0 left-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl text-blueExtraLight z-10' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(true); setMenu3Open(false) }} onMouseLeave={() => setMenu2Open(true)} >
-                            <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu2Open(true)}> Actions</a>
+                            <Link className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu2Open(true)} href={'/actions'}> {t("header3")} </Link>
                         </div>
                         <div className='flex flex-col items-start top-0 left-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl text-blueExtraLight z-10' onMouseEnter={() => { setMenu1Open(false); setMenu2Open(false); setMenu3Open(true) }} onMouseLeave={() => setMenu3Open(true)}>
-                            <a className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu3Open(true)}>Interesting</a>
+                            <Link className='text-blueExtraLight no-underline text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]' onClick={() => setMenu3Open(true)} href={'/interesting'}>{t("header4")} </Link>
+                        </div>
+                        <div className='flex flex-col items-start top-0 left-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] rounded-3xl text-blueExtraLight z-10'>
+                            <LocaleSwitcher />
                         </div>
                     </div>
                     <div className={`flex flex-col sm:flex-row sm:items-start items-center sm:fixed top-0  left-0 sm:mt-[6vh] z-100`}>
@@ -89,6 +97,7 @@ export default function MenuHeader() {
                         {menu2open && <Menu2 />}
                         {menu3open && <Menu3 />}
                     </div>
+
                     <div className="search_box">
                         <form action="" id="form2" className={`flex shadow-xl flex-row items-center sm:fixed top-0 right-0 w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] pt-[1vh] pb-[1vh] rounded-3xl border border-blueDark border-1 m-[1vh] text-blueExtraLight text-sm md:text-lg sm:text-md z-10`} >
                             <input className='bg-blueExtraDark'  type="text" id="search" name="suche" placeholder="Search" onKeyDown={handleKeyDown} />

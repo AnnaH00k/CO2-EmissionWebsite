@@ -1,11 +1,14 @@
+'use client';
 import React from "react";
-import MenuHeader from "../components/menuHeader";
-import Footer from "../components/footer";
+import { useTranslations } from 'next-intl'
 
 
 
-export default function co2InfoPage() {
- 
+
+
+export default function Co2InfoPage() {
+  const t = useTranslations('CO2InfoPage')
+
 
   return (
     <div>
@@ -15,7 +18,7 @@ export default function co2InfoPage() {
         className=" mt-[5vh] flex flex-col justify-center items-center"
       >
         <h1 className="text-blueExtraLight text-center text-4xl  m-4  ">
-          {"Understanding CO2: Its Impact and Monitoring"}
+          {t('header1')}
         </h1>
 
         <div className="flex flex-col items-center justify-center  sm:w-[80vw] w-[95vw]  p-8 bg-blueExtraDark rounded-lg">
@@ -74,7 +77,7 @@ export default function co2InfoPage() {
 
                     <img
                       className="rounded-xl w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4 object-contain"
-                      src={process.env.NODE_ENV === 'production' ? '/co2-zone/photosynthesis.png' : '/photosynthesis.png'}
+                      src={'/photosynthesis.png'}
                       alt="photosynthesis"
                     />
                   </div>
@@ -94,7 +97,7 @@ export default function co2InfoPage() {
 
                     <img
                       className="rounded-xl object-contain w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4"
-                      src={process.env.NODE_ENV === 'production' ? '/co2-zone/carbonation.png' : '/carbonation.png'}
+                      src={'/carbonation.png'}
                       alt="carbonation"
                     />
                   </div>

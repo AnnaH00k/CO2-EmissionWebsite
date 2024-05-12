@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from 'next-intl/link';
+
 
 export default function Footer() {
     useEffect(() => {
@@ -18,9 +20,9 @@ export default function Footer() {
     return (
         <footer className="flex mt-[5vh] w-full overflow-hidden  justify-center shadow-top-xl  py-6 px-2 bg-blueExtraDark border border-blueDark border-solid border-1">
             <ul className="">
-                <a className="m-2 text-blueExtraLight github-page-link" href="/datasecurity"> Datasecurity</a>
-                <a className="m-2 text-blueExtraLight github-page-link" href="/impressum"> Imprint</a>
-                <a className="m-2 text-blueExtraLight github-page-link" href="/contact">Contact</a>
+                <Link className="m-2 text-blueExtraLight github-page-link" href="/datasecurity"> Datasecurity</Link>
+                <Link className="m-2 text-blueExtraLight github-page-link" href="/impressum"> Imprint</Link>
+                <Link className="m-2 text-blueExtraLight github-page-link" href="/contact">Contact</Link>
             </ul>
         </footer>
     );

@@ -1,0 +1,32 @@
+{
+    "Homepage": {
+    "helloWorld": "Promouvoir la conscience environnementale, ensemble !"
+    },
+    "ActionsPage": {
+    "header1": "Lutter contre le changement climatique : actions collectives pour un avenir durable"
+    },
+    "CO2InfoPage": {
+    "header1": "Comprendre le CO2 : son impact et sa surveillance"
+    },
+    "ContactPage": {
+    "header1": "Contactez-nous"
+    },
+    "DatasecurityPage": {
+    "header1": "Sécurité des données"
+    },
+    "ImpressumPage": {
+    "header1": "Informations légales"
+    },
+    "InterestingPage": {
+    "header1": "Aborder le changement climatique : stratégies mondiales et solutions émergentes"
+    },
+    "MenuHeader": {
+    "header1": "Vue d'ensemble",
+    "header2": "Infos CO2",
+    "header3": "Actions",
+    "header4": "Intéressant"
+    },
+    "LocaleSwitcher": {
+        "locale": "{locale, select, fr {français} en {anglais} other {inconnu}}"
+    }
+    }

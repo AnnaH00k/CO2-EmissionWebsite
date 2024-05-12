@@ -15,6 +15,8 @@ export default function Home() {
               alt="logo"
               width="100%"
             />
+            <img src={process.env.NODE_ENV === 'production' ? '/co2-zone/{$locales}/CO2zoneLogo.png' : '/CO2zoneLogo.png'}  alt="logo" width="100%" />
+
           </div>
           <h1 className="flex hyphens-auto text-center text-blueExtraLight text-lg sm:text-4xl m-4 ">
             {t('helloWorld')}

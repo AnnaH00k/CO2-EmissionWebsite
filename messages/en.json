@@ -1,6 +1,7 @@
 {
     "Homepage": {
-        "helloWorld": "Advancing Environmental Consciousness, Together!"
+        "helloWorld": "Advancing Environmental Consciousness, Together!",
+        "startimage": "/CO2zoneLogo.png"
     },
     "ActionsPage": {
         "header1": "Combating Climate Change: Collective Actions for a Sustainable Future"

@@ -11,7 +11,7 @@ export default function Home() {
         <div className=" mt-[5vh] flex flex-col justify-center items-center">
           <div className="w-[40vw] max-w-[500px]">
             <img
-              src={"../CO2zoneLogo.png"}
+              src={t("startimage")}
               alt="logo"
               width="100%"
             />

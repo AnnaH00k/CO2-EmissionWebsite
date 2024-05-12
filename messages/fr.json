@@ -1,6 +1,7 @@
 {
     "Homepage": {
-    "helloWorld": "Promouvoir la conscience environnementale, ensemble !"
+    "helloWorld": "Promouvoir la conscience environnementale, ensemble !",
+    "startimage": "/CO2zoneLogo.png"
     },
     "ActionsPage": {
     "header1": "Lutter contre le changement climatique : actions collectives pour un avenir durable"

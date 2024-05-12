@@ -77,7 +77,7 @@ export default function Co2InfoPage() {
 
                     <img
                       className="rounded-xl w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4 object-contain"
-                      src={'../photosynthesis.png'}
+                      src={'/photosynthesis.png'}
                       alt="photosynthesis"
                     />
                   </div>
@@ -97,7 +97,7 @@ export default function Co2InfoPage() {
 
                     <img
                       className="rounded-xl object-contain w-full sm:w-[30%] h-auto mt-2 mb-4 sm:m-4"
-                      src={'../carbonation.png'}
+                      src={'/carbonation.png'}
                       alt="carbonation"
                     />
                   </div>

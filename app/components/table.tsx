@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import jsonData from "../data/table.json";
 import { ArrowArcLeft, Info } from "@phosphor-icons/react/dist/ssr";
 import { ArrowArcRight } from "@phosphor-icons/react";
+import { useTranslations } from 'next-intl';
+
 
 export default function Table() {
   interface TableData {
@@ -11,7 +13,7 @@ export default function Table() {
     CO2_emissions: { [key: string]: number };
     company?: string;
   }
-
+  const t = useTranslations('Table')
   const [tableData, setTableData] = useState<TableData[]>([]);
   const [showCompanies, setShowCompanies] = useState<string>("true");
   const [sortOrder, setSortOrder] = useState<"oldToNew" | "newToOld">(
@@ -181,7 +183,7 @@ export default function Table() {
       <section className="mt-4 w-[90vw] sm:w-[80vw]">
         <div className="flex bg-blueExtraLight justify-end items-center">
           <h2 className="text-lg sm:text-4xl align-center flex justify-center w-full p-3 text-center text-blueDark bg-blueExtraLight">
-            {"CO2-Emission-Overview (Unit:MtCO2e)"}
+            {t("header")}
           </h2>
 
           <Info
@@ -214,17 +216,14 @@ export default function Table() {
                 </svg>
               </button>
               <li>
-                {
-                  "Tap any year or country to mark it as selected. Tap again to unselect."
-                }
+                {t("info1")}
+               
               </li>
               <li>
-                {
-                  "Tap the Set Favorites button to filter the table to only show selected years, countries, and companies."
-                }
+              {t("info2")}
               </li>
-              <li>{"Reload the page to reset the table."}</li>
-              <li>{" Use arrows or mouse scrolling to navigate the table. Push down scroll wheel and pull to the direction you want to go to."}</li>
+              <li> {t("info3")} </li>
+              <li> {t("info4")} </li>
               
             </div>
           )}
@@ -233,7 +232,7 @@ export default function Table() {
         <div className="flex sm:flex-row flex-col justify-center bg-blueDark border border-blueExtraLight border-solid border-1 items-center">
           <div>
             <label className="text-blueExtraLight" htmlFor="showData">
-              {"Show:"}
+               {t("label1")}
             </label>
             <select
               className="bg-blueExtraLight border border-blueExtraLight border-solid border-1 rounded-md text-blueDark p-1 m-1"
@@ -249,42 +248,42 @@ export default function Table() {
                 }
               }}
             >
-              <option value="all">{"All"}</option>
-              <option value="true">{"Only Companies"} </option>
-              <option value="false">{"Only Countries"}</option>
+              <option value="all">{t("label1Choice1")}</option>
+              <option value="true">{t("label1Choice2")} </option>
+              <option value="false">{t("label1Choice3")}</option>
             </select>
           </div>
 
           <div>
             <label className="text-blueExtraLight" htmlFor="sortData">
-              {"Sort:"}
+              {t("label2")}
             </label>
             <select
               className="bg-blueExtraLight border border-blueExtraLight border-solid border-1 rounded-md text-blueDark p-1 m-1"
               id="sortData"
               onChange={(e) => handleSortChange(e.target.value)}
             >
-              <option value="oldToNew">{"Old to New"}</option>
-              <option value="newToOld">{"New to Old:"}</option>
+              <option value="oldToNew">{t("label2Choice1")}</option>
+              <option value="newToOld">{t("label2Choice2")}</option>
             </select>
           </div>
 
           <div>
             <label className="text-blueExtraLight" htmlFor="sortCO2">
-              {"CO2 Emissions:"}
+             {t("label3")}
             </label>
             <select
               className="bg-blueExtraLight border border-blueExtraLight border-solid border-1 rounded-md text-blueDark p-1 m-1"
               id="sortCO2"
               onChange={(e) => handleCO2SortChange(e.target.value)}
             >
-              <option value="">{"Unsorted"}</option>
-              <option value="lowToHigh">{"Low to High"}</option>
-              <option value="highToLow">{"High to Low"}</option>
+              <option value="">{t("label3Choice3")}</option>
+              <option value="lowToHigh">{t("label3Choice1")}</option>
+              <option value="highToLow">{t("label3Choice2")} </option>
             </select>
           </div>
           <div className="bg-blueExtraLight border border-blueExtraLight border-solid border-1 rounded-md text-blueDark p-1 m-1">
-            <button onClick={handleFavorites}> {"Set Favorites"}</button>
+            <button onClick={handleFavorites}>{t("handleFavorites")} </button>
           </div>
         </div>
 
@@ -295,13 +294,13 @@ export default function Table() {
             onClick={scrollLeft}
           >
             <ArrowArcLeft size={24} />
-            {"Scroll Left"}
+            {t("scrollLeft")}
           </button>
           <button
             className={`flex rounded-full justify-center items-center border border-blueExtraDark p-1 m-1 gap-1 text-xs sm:text-lg `}
             onClick={scrollRight}
           >
-            {"Scroll Right"} <ArrowArcRight size={24} />
+            {t("scrollRight")} <ArrowArcRight size={24} />
           </button>
         </div>
 
@@ -321,10 +320,10 @@ export default function Table() {
             <thead>
               <tr className="border border-blueExtraLight border-solid border-1">
                 <th className="border border-blueExtraLight border-solid border-1">
-                  {"code"}
+                  {t("code")}
                 </th>
                 <th className="border border-blueExtraLight border-solid border-1">
-                  {"Country & Company"}
+                  {t("countryAndCompany")}
                 </th>
                 {favoritesClicked
                   ? filteredYears.map((year) => (
@@ -356,7 +355,7 @@ export default function Table() {
                       </th>
                     ))}
                 <th className="border border-blueExtraLight border-solid border-1">
-                  {"Total"}
+                  {t("total")}
                 </th>
               </tr>
             </thead>

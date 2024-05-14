@@ -163,6 +163,30 @@
         "impressum": "Legal Information",
         "datasecurity": "Data Security"
     },
+    "Table": {
+        "header": "CO2-Emission-Overview (Unit:MtCO2e)",
+        "info1": "Tap any year or country to mark it as selected. Tap again to unselect.",
+        "info2": "Tap the Set Favorites button to filter the table to only show selected years, countries, and companies.",
+        "info3": "Reload the page to reset the table.",
+        "info4": "Use arrows or mouse scrolling to navigate the table. Push down scroll wheel and pull to the direction you want to go to.",
+        "label1": "Show:",
+        "label1Choice1": "All",
+        "label1Choice2": "Only Companies",
+        "label1Choice3": "Only Countries",
+        "label2": "Sort:",
+        "label2Choice1": "Old to New",
+        "label2Choice2": "New to Old",
+        "label3": "CO2 Emissions:",
+        "label3Choice1": "Low to High",
+        "label3Choice2": "High to Low",
+        "label3Choice3": "Unsorted",
+        "handleFavorites": "Set Favorites",
+        "scrollLeft": "Scroll Left",
+        "scrollRight": "Scroll Right",
+        "code": "Code",
+        "countryAndCompany": "Country & Company",
+        "total": "Total"
+    },
     "LocaleSwitcher": {
         "locale": "{locale, select, fr {French} en {English} ar {Arabic} other {Unknown}}"
     }

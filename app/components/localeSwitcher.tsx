@@ -19,7 +19,7 @@ export default function LocaleSwitcher() {
         <select
             defaultValue={locale}
             onChange={onLocaleChange}
-            className='bg-blueExtraDark text-blueExtraLight border-none cursor-pointer  text-sm md:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]'
+            className='bg-blueExtraDark text-blueExtraLight border-none cursor-pointer  text-sm md:text-md lg:text-lg sm:text-md w-auto my-[1vh] mx-[1vw]'
         >
             {['en', 'ar'].map((lang) => (
                 <option key={lang} value={lang}>

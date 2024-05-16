@@ -137,7 +137,8 @@
         "header1": "Overview",
         "header2": "CO2 Infos",
         "header3": "Actions",
-        "header4": "Interesting"
+        "header4": "Interesting",
+        "search": "Search..."
     },
     "Menu1": {
         "h0": "What is CO2?",
@@ -188,7 +189,7 @@
         "total": "Total"
     },
     "LocaleSwitcher": {
-        "locale": "{locale, select, fr {French} en {English} ar {Arabic} other {Unknown}}"
+        "locale": "{locale, select, en {English} ar {Arabic} other {Unknown}}"
     }
 
 }

@@ -1,15 +1,17 @@
 "use client";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next-intl/link';
 
 
 
 export default function Menu1() {
   const t = useTranslations('Menu1')
-
+  const locale = useLocale();
+  const isArabic = locale === 'ar';
 
   return (
-    <div className="sm:relative fixed bg-blueExtraDark shadow-xl sm:left-10 hover:bg-blueExtraDark flex flex-col flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh] text-blueExtraLight ">
+    <div className={` fixed flex flex-col  sm:w-[100vw] w-auto h-auto items-center ${isArabic ? 'sm:items-end' : 'sm:items-start'}`}>
+    <div className={`sm:relative fixed bg-blueExtraDark shadow-xl hover:bg-blueExtraDark flex flex-col items-start w-auto h-auto  rounded-3xl border border-blueDark border-solid border-2 m-[1vh]  text-blueExtraLight ${isArabic ? 'sm:right-10' : 'sm:left-10'}`}>
       <Link
         className="text-blueExtraLight hyphens-auto no-underline text-sm md:text-lg sm:text-md w-full my-[1vh] mx-[1vw]"
         href= '/co2Info'
@@ -46,6 +48,7 @@ export default function Menu1() {
       >
          {t("h5")} 
       </Link>
+    </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import jsonData from "../data/table.json";
 import { ArrowArcLeft, Info } from "@phosphor-icons/react/dist/ssr";
 import { ArrowArcRight } from "@phosphor-icons/react";
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 
 export default function Table() {
@@ -24,6 +24,8 @@ export default function Table() {
   const [selectedYears, setSelectedYears] = useState<string[]>([]);
   const [favoritesClicked, setFavoritesClicked] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const locale = useLocale();
+  const isArabic = locale === 'ar';
 
   useEffect(() => {
     const formattedData: TableData[] = jsonData.table.map((item: any) => ({
@@ -229,8 +231,8 @@ export default function Table() {
           )}
         </div>
 
-        <div className="flex sm:flex-row flex-col justify-center bg-blueDark border border-blueExtraLight border-solid border-1 items-center">
-          <div>
+        <div className={`flex  flex-col  ${isArabic ? 'sm:flex-row-reverse' : 'sm:flex-row'} justify-center bg-blueDark border border-blueExtraLight border-solid border-1 items-center`}>
+          <div className={`flex items-center  ${isArabic ? 'flex-row-reverse' : 'flex-row'}`}>
             <label className="text-blueExtraLight" htmlFor="showData">
                {t("label1")}
             </label>
@@ -254,7 +256,7 @@ export default function Table() {
             </select>
           </div>
 
-          <div>
+          <div className={`flex items-center  ${isArabic ? 'flex-row-reverse' : 'flex-row'}`}>
             <label className="text-blueExtraLight" htmlFor="sortData">
               {t("label2")}
             </label>
@@ -268,7 +270,7 @@ export default function Table() {
             </select>
           </div>
 
-          <div>
+          <div className={`flex items-center  ${isArabic ? 'flex-row-reverse' : 'flex-row'}`}>
             <label className="text-blueExtraLight" htmlFor="sortCO2">
              {t("label3")}
             </label>

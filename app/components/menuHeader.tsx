@@ -50,8 +50,8 @@ export default function MenuHeader() {
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>)  => {
         if (event.key === 'Enter') {
             event.preventDefault();
-            checkInput();
             (event.target as HTMLInputElement).blur();  // Close the keyboard
+            checkInput();
         }
     };
 

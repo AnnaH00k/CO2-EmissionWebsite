@@ -52,6 +52,7 @@ export default function MenuHeader() {
             event.preventDefault();
             (event.target as HTMLInputElement).blur();  // Close the keyboard
             checkInput();
+
         }
     };
 
@@ -70,6 +71,7 @@ export default function MenuHeader() {
         else {
             var value = query.value;
             (window as any).find(value);
+            query.value = ''; // Clear the input field after search
         }
     
         return true;

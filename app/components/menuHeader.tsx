@@ -56,13 +56,13 @@ export default function MenuHeader() {
 
     function checkInput() {
         var query = document.getElementById('search') as HTMLInputElement;
-        var regex = /^[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=<> ]+$/;
+        var regex = /^[\-._~:/?#[\]@!$&'()*+,;=<>]+$/;
     
         if (query === null || query.value === "" || query.value === undefined) {
             alert("Please enter a search term");
             return false;
         }
-        else if (!regex.test(query.value)) {
+        else if (regex.test(query.value)) {
             alert("Special characters are not allowed due to risk of code injection");
             return false;
         }

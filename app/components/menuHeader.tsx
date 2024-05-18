@@ -51,6 +51,7 @@ export default function MenuHeader() {
         if (event.key === 'Enter') {
             event.preventDefault();
             checkInput();
+            (event.target as HTMLInputElement).blur();  // Close the keyboard
         }
     };
 
@@ -68,7 +69,6 @@ export default function MenuHeader() {
         }
         else {
             var value = query.value;
-            query.blur(); // Close the keyboard on small devices
             (window as any).find(value);
         }
     

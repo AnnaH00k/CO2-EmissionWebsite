@@ -89,7 +89,6 @@ export default function MenuHeader() {
                 setContentFound(false);
             }
             query.blur(); // Remove focus from the input field after search
-            query.value = ''; // Clear the input field after search
 
         }
     
@@ -99,7 +98,7 @@ export default function MenuHeader() {
     useEffect(() => {
         // Show alert if no content found
         if (!contentFound) {
-            alert("No content found matching the search term");
+            alert("No further content found matching the search term");
             setContentFound(true); // Reset content found for next search
         }
     }, [contentFound]);

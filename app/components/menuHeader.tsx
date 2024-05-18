@@ -68,6 +68,7 @@ export default function MenuHeader() {
         }
         else {
             var value = query.value;
+            query.blur(); // Close the keyboard on small devices
             (window as any).find(value);
         }
     

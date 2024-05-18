@@ -56,6 +56,14 @@ export default function MenuHeader() {
         }
     };
 
+
+    const handleSearchClick = () => {
+        checkInput();
+        const query = document.getElementById('search') as HTMLInputElement;
+        query.blur(); // Remove focus from the input field after search
+    };
+
+
     function checkInput() {
         var query = document.getElementById('search') as HTMLInputElement;
         var regex = /^[\-._~:/?#[\]@!$&'()*+,;=<>]+$/;
@@ -107,7 +115,7 @@ export default function MenuHeader() {
                     <div className="search_box">
                         <form action="" id="form2" className={`flex shadow-xl flex-row items-center sm:fixed top-0 ${isArabic ? 'left-0' : 'right-0'} w-auto h-auto bg-blueExtraDark pl-[1vw] pr-[1vw] pt-[1vh] pb-[1vh] rounded-3xl border border-blueDark border-1 m-[1vh] text-blueExtraLight text-sm md:text-md sm:text-md lg:text-lg z-10`} >
                             <input className='bg-blueExtraDark'  type="text" id="search" name="suche" placeholder={t("search")} onKeyDown={handleKeyDown} />
-                            <button type="button" id="submit_form" onClick={checkInput} title="Search"><MagnifyingGlass size={25} /></button>
+                            <button type="button" id="submit_form" onClick={handleSearchClick} title="Search"><MagnifyingGlass size={25} /></button>
                         </form>
                     </div>
                 </div>

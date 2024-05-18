@@ -15,6 +15,8 @@ export default function MenuHeader() {
     const [menu1open, setMenu1Open] = useState(false);
     const [menu2open, setMenu2Open] = useState(false);
     const [menu3open, setMenu3Open] = useState(false);
+    const [contentFound, setContentFound] = useState(true); // Variable to track content found
+
 
     const locale = useLocale();
     const isArabic = locale === 'ar';
@@ -80,7 +82,12 @@ export default function MenuHeader() {
         }
         else {
             var value = query.value;
-            (window as any).find(value);
+            if ((window as any).find(value)) {
+                setContentFound(true);
+            }
+            else {
+                setContentFound(false);
+            }
             query.blur(); // Remove focus from the input field after search
             query.value = ''; // Clear the input field after search
 
@@ -89,7 +96,13 @@ export default function MenuHeader() {
         return true;
     }
     
-
+    useEffect(() => {
+        // Show alert if no content found
+        if (!contentFound) {
+            alert("No content found matching the search term");
+            setContentFound(true); // Reset content found for next search
+        }
+    }, [contentFound]);
 
     return (
         <header >

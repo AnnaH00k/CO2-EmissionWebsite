@@ -56,7 +56,7 @@ export default function MenuHeader() {
 
     function checkInput() {
         var query = document.getElementById('search') as HTMLInputElement;
-        var regex = /^[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=<>]+$/;
+        var regex = /^[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=<> ]+$/;
     
         if (query === null || query.value === "" || query.value === undefined) {
             alert("Please enter a search term");

@@ -81,7 +81,9 @@ export default function MenuHeader() {
         else {
             var value = query.value;
             (window as any).find(value);
+            query.blur(); // Remove focus from the input field after search
             query.value = ''; // Clear the input field after search
+
         }
     
         return true;

@@ -191,7 +191,7 @@ export default function Table() {
           <Info
             size={24}
             onClick={toggleExplanation}
-            className="m-3 text-blueExtraDark absolute"
+            className="m-3 text-blueExtraDark sm:absolute"
           />
           {isExplanationOpen && (
             <div

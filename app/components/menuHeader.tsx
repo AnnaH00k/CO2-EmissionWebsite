@@ -51,6 +51,8 @@ export default function MenuHeader() {
         if (event.key === 'Enter') {
             event.preventDefault();
             (event.target as HTMLInputElement).blur();  // Close the keyboard
+            const query = document.getElementById('search') as HTMLInputElement;
+            query.blur(); // Remove focus from the input field after search
             checkInput();
 
         }
